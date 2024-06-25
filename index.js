@@ -5,7 +5,12 @@ const cors = require('cors');
 const app = express();
 const port = 3000;
 
-app.use(cors()); 
+var corsOptions = {
+  origin: '*',
+  methods: 'GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD'
+}
+
+app.use(cors(corsOptions)); 
 
 app.get('/players/:file', (req, res) => {  
   fs.readFile('./players/'+req.params.file+'.json', 'utf8', (err, data) => {
