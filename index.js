@@ -7,7 +7,8 @@ const port = 3000;
 
 var corsOptions = {
   origin: '*',
-  methods: 'GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD'
+  methods: 'GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD',
+  allowedHeaders: 'Content-Type, Origin, Accept, Authorization, Content-Length, X-Requested-With'
 }
 
 app.use(cors(corsOptions)); 
