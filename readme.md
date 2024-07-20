@@ -1,4 +1,5 @@
 Endpoints de equipos
+
 competition/[la_liga]
 Todos los equipos de una competición
 
